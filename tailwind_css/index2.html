@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison | Contemporary Fashion (Tailwind Edition)</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration (Matching your custom CSS variables) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#fafafa',
+                        customText: '#111',
+                        customTextLight: '#555',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-customBg text-customText font-sans leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="absolute w-full z-10 flex justify-between items-center py-6 px-[5%] bg-transparent">
+        <div class="font-serif text-2xl tracking-[2px] font-bold uppercase">Maison</div>
+        <ul class="hidden md:flex gap-8 list-none">
+            <li><a href="#trending" class="text-[0.9rem] uppercase tracking-[1px] hover:opacity-70 transition-opacity">Trending</a></li>
+            <li><a href="#lookbook" class="text-[0.9rem] uppercase tracking-[1px] hover:opacity-70 transition-opacity">Lookbook</a></li>
+            <li><a href="#heritage" class="text-[0.9rem] uppercase tracking-[1px] hover:opacity-70 transition-opacity">Our Story</a></li>
+        </ul>
+        <a href="#" class="py-[0.8rem] px-8 text-[0.8rem] uppercase tracking-[1px] border border-customText text-customText hover:bg-customText hover:text-customBg transition-all duration-300">Shop Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center text-center px-5 bg-cover bg-center" style="background-image: linear-gradient(rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.8)), url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=2000&q=80');">
+        <div class="max-w-3xl">
+            <h1 class="font-serif text-5xl md:text-[5rem] leading-[1.1] mb-6">Redefining Modern Elegance</h1>
+            <p class="text-[1.1rem] max-w-[500px] mx-auto mb-10 text-customTextLight">Discover the Autumn/Winter 2026 collection. Where avant-garde streetwear meets minimalist tailoring.</p>
+            <a href="#trending" class="inline-block py-[0.8rem] px-8 text-[0.8rem] uppercase tracking-[1px] bg-customText text-customBg hover:bg-[#333] transition-all duration-300">Explore Collection</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        
+        <!-- Trending Section -->
+        <section id="trending" class="py-32 px-[5%]">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-[2.5rem] mb-2">Current Trends</h2>
+                <p class="text-customTextLight">The silhouettes defining this season.</p>
+            </div>
+            <!-- Grid: 1 column on mobile, responsive multi-column on larger screens -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group cursor-pointer overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550614000-4b95d466f366?auto=format&fit=crop&w=800&q=80" alt="Oversized Blazer" class="w-full h-[450px] object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="py-6">
+                        <h3 class="font-serif text-2xl mb-2">Oversized Tailoring</h3>
+                        <p class="text-customTextLight">Structured shoulders and relaxed fits.</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Streetwear" class="w-full h-[450px] object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="py-6">
+                        <h3 class="font-serif text-2xl mb-2">Elevated Streetwear</h3>
+                        <p class="text-customTextLight">Utility meets high-fashion luxury.</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1434389678232-06703554f6b2?auto=format&fit=crop&w=800&q=80" alt="Minimalist" class="w-full h-[450px] object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="py-6">
+                        <h3 class="font-serif text-2xl mb-2">Minimalist Neutrals</h3>
+                        <p class="text-customTextLight">Timeless pieces in earth tones.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Lookbook / Image Gallery -->
+        <section id="lookbook" class="pt-8 pb-32 px-[5%]">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-[2.5rem] mb-2">The Lookbook</h2>
+            </div>
+            <!-- Masonry-style Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[300px] gap-4">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Fashion 1" class="w-full h-[400px] md:h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?auto=format&fit=crop&w=600&q=80" alt="Fashion 2" class="w-full h-[400px] md:h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Fashion 3" class="w-full h-[400px] md:h-full object-cover md:row-span-2">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="Fashion 4" class="w-full h-[400px] md:h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1509631179647-0c5000508c56?auto=format&fit=crop&w=600&q=80" alt="Fashion 5" class="w-full h-[400px] md:h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Fashion Background Article -->
+        <section id="heritage" class="py-32 px-[5%] bg-white">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 max-w-[1200px] mx-auto">
+                <div class="flex-1">
+                    <h2 class="font-serif text-4xl md:text-[3rem] mb-6">The Heritage of Silhouette</h2>
+                    <p class="font-serif italic text-xl md:text-[1.3rem] text-customTextLight mb-8 leading-[1.8]">Fashion is not merely about clothing; it is a reflection of cultural zeitgeist, an ongoing dialogue between historical craftsmanship and avant-garde innovation.</p>
+                    <p class="mb-6 text-[#444] text-[1.05rem]">Since the early 20th century, the architectural approach to garment construction has continually evolved. What began as rigid, structured tailoring in the ateliers of Paris and Milan has gradually dissolved into fluid, expressive forms. Today's contemporary aesthetics draw heavily from vintage utilitarian wear, elevated through the lens of modern minimalism.</p>
+                    <p class="mb-6 text-[#444] text-[1.05rem]">At Maison, we honor this lineage. Our design philosophy bridges the gap between the past and the future. By deconstructing traditional patterns, we build new narratives—ensuring every seam, fold, and fabric choice pays homage to the master artisans who paved the way for modern luxury, while pushing the boundaries of what streetwear can become.</p>
+                    <a href="#" class="inline-block mt-4 uppercase text-[0.85rem] font-medium tracking-[1px] border-b border-customText pb-1 hover:opacity-60 transition-opacity">Read the full manifesto &rarr;</a>
+                </div>
+                <div class="flex-1 w-full">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1fac08b042?auto=format&fit=crop&w=800&q=80" alt="Tailor working" class="w-full h-auto object-cover aspect-[3/4]">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Newsletter -->
+    <footer class="bg-customText text-customBg py-24 px-[5%] text-center pb-12">
+        <h2 class="font-serif text-3xl md:text-[2.5rem] mb-4">Join the Inner Circle</h2>
+        <p class="text-[#aaa] mb-12">Subscribe for early access to drops and exclusive editorials.</p>
+        
+        <form class="flex flex-col md:flex-row justify-center max-w-[500px] mx-auto mb-12 gap-4 md:gap-0">
+            <input type="email" placeholder="Email Address" required class="flex-1 p-4 border-b border-[#555] bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-white font-sans">
+            <button type="submit" class="p-4 px-8 bg-transparent border border-white text-white uppercase tracking-[1px] hover:bg-white hover:text-customText transition-colors duration-300">Subscribe</button>
+        </form>
+        
+        <div class="flex justify-center gap-8 mb-12">
+            <a href="#" class="text-white uppercase text-[0.8rem] tracking-[1px] hover:opacity-70 transition-opacity">Instagram</a>
+            <a href="#" class="text-white uppercase text-[0.8rem] tracking-[1px] hover:opacity-70 transition-opacity">TikTok</a>
+            <a href="#" class="text-white uppercase text-[0.8rem] tracking-[1px] hover:opacity-70 transition-opacity">Pinterest</a>
+        </div>
+        
+        <p class="text-[0.8rem] border-t border-[#333] pt-8 text-[#aaa]">© 2026 MAISON. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
